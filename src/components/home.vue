@@ -6,6 +6,9 @@
 <h1>company....!{{getName('geoSpoc')}}</h1> -->
 
 <!-- <h1 v-on:mousemove="getConsole()">Home</h1>
+
+
+<!-- <h1 v-on:mousemove="getConsole()">Home</h1>
 <button v-on:click="getData()">Click Me!</button> -->
 <h2>pass data to child Components</h2>
 <childPage name="GeoSpoc" :user="user" :getData="getData" />
@@ -41,8 +44,9 @@ export default {
     },
 
 }
-=======
+
 <!-- <h1 v-on:mousemove="getConsole()">home</h1>
+
 <button v-on:click="getData()">Click Me!</button>
 <button v-on:dblclick="getData()">Click Me!</button> -->
 <h2>two way binding</h2>
@@ -63,6 +67,11 @@ export default {
   john
 </label>
 
+
+<h2>{{count}}</h2> -->
+<h2>pass data to child</h2>
+<ChildPage name="ankita" :user="user" :getData="getData"/>
+=======
 <p>How are you feeling today?</p>
   <label>
     <input type="radio" value="great" v-model="howAreYouFeeling" />
@@ -72,6 +81,7 @@ export default {
     <input type="radio" value="wonderful" v-model="howAreYouFeeling" />
     wonderful
   </label>
+
 
 
 <h3>get input field</h3>
@@ -85,6 +95,26 @@ export default {
 </template>
 
 <script>
+
+import ChildPage from './childPage.vue'
+export default {
+    name: "homePage",
+       components: { ChildPage },
+    data() {
+        return {
+            /*  count:0 */
+            user:
+        
+        {
+            name: "peter",
+                email:
+            "ankia@est.com"
+        }
+    }
+ 
+},
+    methods:{
+getData()
 
 export default {
     name:'homePage',
@@ -112,16 +142,25 @@ export default {
       }  
     
  /* getData()
+
 {
-  this.count=this.count+1;
-},
-getConsole()
+    console.log("parent function called")
+//   this.count=this.count+1;
+}
+/* getConsole()
 {
+
+    console.warn("function called");
+} */
+ }
+}
+
     // alert(a)
      console.log("function called")
 } */
  }
 } 
+
 
 </script>
 
