@@ -36,5 +36,6 @@ getConsole()
 <style scoped>
 h1{
     color: orange;
+    text-align: center;
 }
 </style>
