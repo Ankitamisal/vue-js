@@ -8,33 +8,29 @@
 <button v-on:click="getData()">Click Me!</button>
 
 <h2>{{count}}</h2>
-
 </template>
 
 <script>
 export default {
-    name:'homePage',
-    data()
-    {
-         return{
-            count:0
-         }
+    name: 'homePage',
+    data() {
+        return {
+            count: 0
+        }
     },
-    methods:{
-getData()
-{
-  this.count=this.count+1;
-},
-getConsole()
-{
-    console.warn("function called");
-}
- }
+    methods: {
+        getData() {
+            this.count = this.count + 1;
+        },
+        getConsole() {
+            console.warn("function called");
+        }
+    }
 }
 </script>
 
 <style scoped>
-h1{
+h1 {
     color: orange;
 }
 </style>
